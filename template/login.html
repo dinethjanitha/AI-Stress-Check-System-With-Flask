@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Stress Management Website</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+  <script src="/static/js/login.js"></script>
+</head>
+<body>
+  <!-- Login Section -->
+  <section class="login">
+    <h2>Login</h2>
+
+    {% with messages = get_flashed_messages() %}
+
+      {% if messages%}
+        <p>
+          {%for message in messages%}
+            {{message}}
+          {%endfor%}
+        </p>
+      {%endif%}
+
+    {%endwith%}
+   <h4 style="color:red">
+  
+      {{error}}{{done}}
+  
+  </h4>
+    <form method="POST" action="{{url_for('login')}}">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="username" id="email" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-button">Log In</button>
+    </form>
+    <p>Don't have an account? <a href="{{ url_for('signup')}}">Sign up</a></p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: 123-456-7890</p>
+    </div>
+    <div class="legal">
+      <p>&copy; 2023 Your Stress Management Website. All rights reserved.</p>
+    </div>
+    <div class="additional-links">
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+

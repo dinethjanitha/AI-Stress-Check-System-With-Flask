@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stress Management Website</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+  <script src="/static/js/home.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <img src="/static/imgs/Stress Shift logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li ><a href="home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li ><a href="emotion.html">Emotion Detection</a></li>
+        <li ><a href="stressmanagement.html">Stress Management</a></li>
+        <li ><a href="contact.html">Contact</a></li>
+        <li> <a href="login.html"><button class="cta-button">
+          {%if username%}
+              {{username}}
+          {%else%}
+              login
+          {%endif%}
+    
+        </button></a></li>
+        <li>
+          {%if username%}
+            <a href="{{ url_for('logout')}}"><button class="cta-button">Log out
+            </button></a>
+          {%endif%}
+        </li>
+      </ul>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
+    </nav>
+   
+    
+     
+
+    
+  </header> 
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <img src="/static/imgs/banner.jpg" alt="Stress Management Hero Image">
+    <h1>Harness AI to Manage Workplace Stress</h1>
+    <p>Empowering Employees with Emotional Wellness</p>
+    <br><br>
+  </section>
+
+ 
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature">
+      <h2>Real-time Emotion Detection</h2>
+      <p>Understand your emotions using AI-powered technology</p>
+    </div>
+    <div class="feature">
+      <h2>Personalized Stress Management Recommendations</h2>
+      <p>Receive customized stress management techniques and resources</p>
+    </div>
+    <div class="feature">
+      <h2>Mindfulness Exercises</h2>
+      <p>Practice mindfulness and reduce stress with guided exercises</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="/static/imgs/team1.jpg" alt="Team Member 1">
+        <h3>John Doe</h3>
+        <p>CEO</p>
+      </div>
+      <div class="team-member">
+        <img src="/static/imgs/team2.jpeg" alt="Team Member 2">
+        <h3>Jane Smith</h3>
+        <p>CO-CEO</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emotion Detection Section -->
+  <section id="emotion-detection" class="emotion-detection">
+    <h2>AI Emotion Detection</h2>
+    <p>Our advanced AI technology can detect and analyze emotions in real-time</p>
+    <div class="visualization">
+      <img src="/static/imgs/GO STRESS.png" alt="Emotion Detection Diagram">
+    </div>
+  </section>
+
+  <!-- Stress Management Section -->
+  <section id="stress-management" class="stress-management">
+    <h2>Stress Management Resources</h2>
+    <p>Access a range of stress management tools and techniques</p>
+    <div class="examples">
+      <div class="example">
+        <div class="example">
+          <img src="/static/imgs/OC3LOF0.jpg" alt="Example 1"> <!--mediation-->
+          <h3>Meditation</h3>
+          <p>Practice meditation to calm your mind and reduce stress</p>
+        </div>
+        <div class="example">
+          <img src="imgs/OC3LQC0.jpg" alt="Example 2"> <!--Breathing Exercises-->
+          <h3>Breathing Exercises</h3>
+          <p>Learn breathing techniques to promote relaxation and reduce anxiety</p>
+        </div>
+        <div class="example">
+          <img src="/static/imgs/OC3LOF0.jpg" alt="Example 3"> <!--Physical Activity-->
+          <h3>Physical Activity</h3>
+          <p>Engage in physical exercise to release endorphins and relieve stress</p>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <div class="testimonial">
+        <img src="/static/imgs/team1.jpg" alt="Testimonial 1">
+        <h3>John Smith</h3>
+        <p>"This website has been a game-changer in managing my stress. The AI emotion detection has helped me gain better insights into my emotions."</p>
+      </div>
+      <div class="testimonial">
+        <img src="/static/imgs/team2.jpeg" alt="Testimonial 2">
+        <h3>Jane Doe</h3>
+        <p>"I love the personalized stress management recommendations. It has made a significant positive impact on my well-being."</p>
+      </div>
+    </section>
+  
+    <!-- Call-to-Action Section -->
+    <section class="call-to-action">
+      <h2>Start Managing Your Stress Today</h2>
+      <button class="cta-button">Sign Up Now</button>
+    </section>
+  
+    <!-- Footer Section -->
+    <footer>
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p>Email: info@example.com</p>
+        <p>Phone: 123-456-7890</p>
+      </div>
+      <div class="legal">
+        <p>&copy; 2023 Your Stress Management Website. All rights reserved.</p>
+      </div>
+      <div class="additional-links">
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  </body>
+  </html>
+  
+  
